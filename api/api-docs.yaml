@@ -1,0 +1,45 @@
+openapi: 3.0.1
+info:
+  title: Book Payment Sample API Specification Module
+  description: "Book Payment Sample API Specification Module\
+    \ Testing Module"
+servers:
+- url: localhost:8090/com/payment/sample/v1
+security:
+- bearer-JWT: []
+tags:
+- name: Book Payment Sample
+paths:
+  /external/loadBoookPayList:
+    get:
+      tags:
+      - payment-sample-controller
+      summary: something summary
+      description: something description
+        Table
+      operationId: something operation id
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: integer
+                format: int32
+ 
+components:
+  schemas:
+    PaymentBookListView:
+      type: object
+      properties:
+        bookList:
+          type: array
+          items:
+            $ref: '#/components/schemas/PaymentBookDetails'
+        description: paymentBookListView
+  securitySchemes:
+    bearer-JWT:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

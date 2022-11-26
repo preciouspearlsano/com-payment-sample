@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:dbproductname:alldbconparamhere
+    username: user
+    password: password
+    
+endpoint:
+  switchOn: true
+  po:
+    domain: localhost
+    module: com/po/sample/v1
+    action:
+      bookpay: /internal/book/insert
+      bookpayupdt: /internal/book/update
+  
