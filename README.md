@@ -16,6 +16,7 @@ Email: pr3_cious_15@yahoo.com
 ### Gradle run
 
 gradle build -x test
+
 gradlew bootRun -Pdev
 
 ### Other run
